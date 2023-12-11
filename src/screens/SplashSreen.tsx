@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
 const SplashScreen = ({ navigation }: any) => {
-//necesito colocar imagen
 
     useEffect(() => {
         setTimeout(() => {
@@ -14,28 +13,24 @@ const SplashScreen = ({ navigation }: any) => {
         <View style={styles.container}>
         <Image
             style={styles.imagenFondo}
-            source={require('../recursos/images/Sreen1.jpg')}
+            source={require('../recursos/images/Portada.jpg')}
         />
         
         </View>
     );
-    };
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-
     },
     imagenFondo: {
         flex: 1,
+        position:'relative',
         width: '100%',
-        resizeMode: 'contain',
-        alignSelf: 'center',
-
+        resizeMode:'cover',
     },
-
-   
 });
 
 export default SplashScreen;
