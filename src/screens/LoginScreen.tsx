@@ -71,15 +71,15 @@ const LoginScreen = ({navigation}: Props) => {
               </View>
 
               <TouchableOpacity
-                style={styles.button}
+                style={styles.createAccessButton}
                 onPress={() => navigation.navigate('RegisterScreen')}>
-                <Text style={styles.buttonText}>CREAR ACCESO</Text>
+                <Text style={styles.createAccessButtonText}>CREAR ACCESO</Text>
               </TouchableOpacity>
             </View>
 
             <TouchableOpacity
               style={styles.LoginButton}
-              onPress={() => navigation.navigate('Home')}>
+              onPress={() => navigation.navigate('HomeScreen')}>
               <Text style={styles.TextLoginButton}>ENTRAR</Text>
             </TouchableOpacity>
           </View>
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
   },
   LoginContainer: {
     top: Dimensions.get('window').height * 0.08,
+
   },
   LoginForm: {
     backgroundColor: '#fff',
@@ -139,14 +140,19 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
+    alignItems: 'center',
+    alignContent: 'center',
+    alignSelf: 'center',
     bottom: 0,
     right: 0.5,
     left: 0.5,
     padding: 30,
+    width: 300,
   },
   buttonText: {
     color: 'green',
     textAlign: 'center',
+    backgroundColor: 'red',
   },
   LoginButton: {
     backgroundColor: '#2196F3',
@@ -165,9 +171,22 @@ const styles = StyleSheet.create({
   Image: {
     position: 'absolute',
     bottom: 40,
+    alignSelf: 'center',
   },
   Logo: {
     alignItems: 'center',
     top: -Dimensions.get('window').height * 0.45,
+  },
+  createAccessButton: {
+    position: 'absolute',
+    bottom: 20,
+    alignSelf: 'center',
+    borderRadius: 10,
+  },
+  createAccessButtonText: {
+    color: '#00FF00', 
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
