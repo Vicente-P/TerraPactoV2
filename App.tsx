@@ -1,11 +1,12 @@
-import React from 'react'
-import { HolaMundoScreen } from './src/screens/HolaMundoScreen';
-import StackNavigator from './src/navigation/StackNavigator';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { Navigator } from './src/navigator/Navigator';
 
 const App = () => {
   return (
-    /* <HolaMundoScreen/> */
-    <StackNavigator/>
+    <NavigationContainer>
+      <Navigator/>
+    </NavigationContainer>
   )
 }
 
