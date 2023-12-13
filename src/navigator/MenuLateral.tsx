@@ -8,27 +8,29 @@ import { Image, Text, TouchableOpacity, View, useWindowDimensions } from 'react-
 import React from 'react';
 import { styles } from '../theme/apptheme';
 
+//import { useNavigation } from '@react-navigation/native';
+
+
 const Drawer = createDrawerNavigator();
 
+
 export const MenuLateral = () => {
-  const { width} = useWindowDimensions();
 
   return (
-    <Drawer.Navigator screenOptions={ {
-      drawerType: width >= 768 ? 'slide' : 'slide',
-  } }
+    <Drawer.Navigator 
   drawerContent={ (props) => <MenuInterno { ...props } /> }
+  initialRouteName='HomeScreen'
     >
       <Drawer.Screen name="Navigator" component={Navigator} />
-      <Drawer.Screen name="PanelControl" options={{ title: 'PANEL DE CONTROL'}}  component={PanelControl} />
-      <Drawer.Screen name="ConflictosAmbientales" options={{ title: 'CONFLICTOS SOCIOAMBIENTALES'}} component={ConflictosAmbientales} />
-      <Drawer.Screen name="MediacionesTiempoReal" options={{ title: 'MEDIACIONES EN TIEMPO REAL'}} component={MediacionesTiempoReal} />
-      <Drawer.Screen name="E_Learning" options={{ title: 'E-LEARNING'}} component={E_Learning} />
+      <Drawer.Screen name="PanelControl"   component={PanelControl} />
+      <Drawer.Screen name="ConflictosAmbientales" component={ConflictosAmbientales} />
+      <Drawer.Screen name="MediacionesTiempoReal" component={MediacionesTiempoReal} />
+      <Drawer.Screen name="E_Learning" component={E_Learning} />
     </Drawer.Navigator>
   );
 }
 
-const MenuInterno = ( props:DrawerContentComponentProps) => {
+const MenuInterno = ({ navigation}:DrawerContentComponentProps) => {
   return (
     <DrawerContentScrollView>
         <View >
@@ -38,34 +40,50 @@ const MenuInterno = ( props:DrawerContentComponentProps) => {
         </View>
 
         <View style={ styles.menuContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => navigation.navigate('PanelControl')}
+            >
               <Text style={styles.menuTexto}>PANEL DE CONTROL</Text>
             </TouchableOpacity>
         </View>   
 
         <View style={ styles.menuContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => navigation.navigate('ConflictosAmbientales')}
+            >
               <Text style={styles.menuTexto}>CONFLICTOS SOCIOAMBIENTALES</Text>
             </TouchableOpacity>
         </View>
 
         <View style={ styles.menuContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => navigation.navigate('MediacionesTiempoReal')}
+            >
               <Text style={styles.menuTexto}>MEDIACIONES EN TIEMPO REAL</Text>
             </TouchableOpacity>
         </View>
 
         <View style={ styles.menuContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => navigation.navigate('E_Learning')}
+            >
               <Text style={styles.menuTexto}>E-LEARNING</Text>
             </TouchableOpacity>
         </View>
 
         <View>
-        <TouchableOpacity>
+        <TouchableOpacity
+       // onPress={() => navigation.navigate('LoginScreen')}
+        >
           <Text style={styles.menuTextoCerrarSesion}>CERRAR SESIÓN</Text>
         </TouchableOpacity>
       </View>
+
+      <View>
+            <Image style = {styles.menuLateralgestac}
+              source={require('../recursos/images/gestac.png')}
+            />
+        </View>
     </DrawerContentScrollView>
 );
 

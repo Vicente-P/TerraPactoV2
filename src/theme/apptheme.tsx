@@ -32,9 +32,16 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',        // Negrita
         color: '#009FE3',         // Color del texto
-        marginVertical: 100,      // Margen vertical (espacio arriba y abajo)
+        marginVertical: 60,      // Margen vertical (espacio arriba y abajo)
         marginHorizontal: 5,     // Margen horizontal (espacio a los lados)
         alignSelf: 'flex-end'     // Posicionamiento propio en el extremo derecho
+    },
+
+    menuLateralgestac: {
+        width: 180,
+        height: 100,      
+        alignSelf: 'center',
+        resizeMode: 'contain'
     }
     
     
