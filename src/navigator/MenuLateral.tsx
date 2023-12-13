@@ -22,10 +22,10 @@ export const MenuLateral = () => {
   initialRouteName='HomeScreen'
     >
       <Drawer.Screen name="Navigator" component={Navigator} />
-      <Drawer.Screen name="PanelControl"   component={PanelControl} />
-      <Drawer.Screen name="ConflictosAmbientales" component={ConflictosAmbientales} />
-      <Drawer.Screen name="MediacionesTiempoReal" component={MediacionesTiempoReal} />
-      <Drawer.Screen name="E_Learning" component={E_Learning} />
+      <Drawer.Screen name="PanelControl"  options={{title:'Panel de Control'}} component={PanelControl} />
+      <Drawer.Screen name="ConflictosAmbientales" options={{title:'Conflictos Socioambientales'}} component={ConflictosAmbientales} />
+      <Drawer.Screen name="MediacionesTiempoReal" options={{title:'Mediaciones en Tiempo Real'}} component={MediacionesTiempoReal} />
+      <Drawer.Screen name="E_Learning" options={{title:'E-Learning'}} component={E_Learning} />
     </Drawer.Navigator>
   );
 }
