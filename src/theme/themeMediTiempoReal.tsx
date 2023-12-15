@@ -6,13 +6,12 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    padding: 10,
+    padding: 20,
   },
   titleContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 30,
+    marginTop: 10,
   },
   textMediacion: {
     fontSize: 40,
@@ -24,7 +23,6 @@ export const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10,
   },
   image: {
     width: 400,
@@ -55,36 +53,44 @@ export const styles = StyleSheet.create({
   },
 
   rectangulosContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 20,  // Ajusta según sea necesario
-    backgroundColor: 'lightblue',  // Añadido para hacer el fondo del contenedor de color celeste
-    padding: 10,  // Añadido para dar un poco de espacio alrededor de los rectángulos
-    borderRadius: 10,  // Añadido para hacer los bordes del contenedor redondos
-  },
-  rectangulo: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 10,  // Ajusta según sea necesario
-
-  },
-  rectanguloImage: {
-    width: 150,  // Ajusta el ancho del cuadrado blanco según sea necesario
-    height: 150,  // Ajusta el alto del cuadrado blanco según sea necesario
-    backgroundColor: 'white',  // Agrega un fondo blanco al cuadrado
-    justifyContent: 'center',  // Centra la imagen verticalmente
-    alignItems: 'center',  // Centra la imagen horizontalmente
-    borderRadius: 16,  // Bordes redondos para el cuadro blanco
-    padding: 20,  // Ajusta el tamaño del cuadro blanco
-  },
-  rectanguloImageInner: {
-    width: 80,  // Ajusta el ancho de la imagen según sea necesario
-    height: 80,  // Ajusta el alto de la imagen según sea necesario
-    resizeMode: 'cover',  // Ajusta según la necesidad de la imagen
-    borderRadius: 8,  // Bordes redondos para la imagen
-  },
-  rectanguloText: {
-    marginTop: 5,  // Ajusta según sea necesario
+    flexDirection: 'row',  // Alinea los contenedores izquierdo y derecho en una fila
+    marginTop: 10,  // Ajusta la separación entre el botón y los rectángulos
+    padding: 50,
   },
   
+  rectangulosLeftContainer: {
+    marginRight: 10,
+  },
+  
+  rectangulosRightContainer: {
+    marginLeft: 10,
+  },
+  rectangulo: {
+    flexDirection: 'row',
+    margin: 2,
+    backgroundColor: '#009FE3',
+    padding: 5,
+    width: 150,
+  },
+  rectanguloImage: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rectanguloImageInner: {
+    width: 25,
+    height: 25,
+    resizeMode: 'contain',
+  },
+  rectanguloText: {
+    flex: 1,
+    marginTop: 5,
+    marginLeft: 10,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 16,
+    textAlign: 'left',
+  },
 });
